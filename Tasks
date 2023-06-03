@@ -38,11 +38,9 @@ int ReadInt(string message)
 //Задача 50
 int rows = ReadInt("Введите позицию элемента в строке: ");
 int colums = ReadInt("Введите позицию элемента в столбце: ");
-int[,] numbers = new int[3, 4];
-Console.WriteLine("Исходный массив: ");
+int[,] numbers = new int[5, 7];
 FillArray2D(numbers);
 PrintArray2D(numbers);
-Console.Write("Значение элемента: ");
 if (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) Console.WriteLine(numbers[rows, colums]);
 else Console.WriteLine($"{rows}{colums} -> такого числа в массиве нет");
 
@@ -69,7 +67,6 @@ void PrintArray2D(int[,] array)
     }
     Console.WriteLine();
 }
-
 
 int ReadInt(string message)
 {
